@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2? family=poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
 body {
     padding: 0;
     margin: 0;
     height: 100vh;
     background: #2a2734;
-    font-family: 'poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,29 +13,44 @@ body {
 
 ul {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
 }
+
 li {
     list-style: none;
 }
+
 div {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 46px;
+    font-size: 36px;
     cursor: pointer;
-    margin: 0 4px;
-    border-radius: 20px;
+    margin: 4px;
+    border-radius: 10px;
     color: blue;
-    text-shadow: 0 0 15px blue, 0 0 25px blue;
+    text-shadow: 0 0 10px blue, 0 0 15px blue;
     animation: animate 1.5s linear infinite;
 }
+
 @keyframes animate {
     0% {
         filter: hue-rotate(0deg);
     }
     100% {
         filter: hue-rotate(360deg);
+    }
+}
+
+@media (min-width: 600px) {
+    div {
+        height: 80px;
+        width: 80px;
+        font-size: 46px;
+        border-radius: 20px;
+        text-shadow: 0 0 15px blue, 0 0 25px blue;
     }
 }
